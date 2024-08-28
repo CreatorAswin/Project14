@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-6">
+        <h1>GET the Records</h1>
+       <table>
+            <tr>
+                <td>Dept ID</td>
+                <td>Dept Name</td>
+                <td>Dept Logo</td>
+                <td>Status</td>
+            </tr>
+        
+            @for (item of department; track $index) {
+                <tr>
+                <td>{{item.departmentId}}</td>
+                <td>{{item.departmentName}}</td>
+                <td>{{item.departmentLogo}}</td>
+               <button (click)="onEdit(item)" class="btn btn-primary">Update</button>
+               <button (click)="onDelete(item.departmentId)" class="btn btn-danger">DELETE</button>
+            </tr>
+            }
+       
+       </table>
+    </div>
+    <div class="col-6">
+        <form>
+            <div class="mb-3 mt-3">
+              <label for="email" class="form-label">Department Name</label>
+              <input type="text" class="form-control" id="name" [(ngModel)]="DeptObj.departmentName" placeholder="Enter Department name" name="name" >
+            </div>
+            <div class="mb-3">
+              <label for="logo" class="form-label">Department Logo</label>
+              <input type="text" class="form-control" id="logo" [(ngModel)]="DeptObj.departmentLogo" placeholder="Enter Department logo" name="logo">
+            </div>
+            <div class="form-check mb-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+              </label>
+            </div>
+           
+                <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+                <button type="submit" (click)="onUpdate()" class="btn btn-danger">Update</button>
+           
+          </form>
+    </div>
+    
+
+</div>
+
+
