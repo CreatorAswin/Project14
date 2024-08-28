@@ -1,4 +1,12 @@
+
+
 # Project14
+
+## CRUD Application through API
+C-Create the Department Record
+R-Read the Department Records 
+U-Update the Department Record
+D-Delete the Department Recard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
 
